@@ -10,4 +10,18 @@ export class AuthService {
   async validatePassword(password: string, hash: string) {
     return bcrypt.compare(password, hash);
   }
+
+  async register(data: any) {
+    return {
+      message: 'Registration service ready',
+      email: data.email,
+    };
+  }
+
+  async login(data: any) {
+    return {
+      message: 'Login service ready',
+      email: data.email,
+    };
+  }
 }
